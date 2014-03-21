@@ -1,0 +1,2 @@
+#!/bin/sh
+rsync -Haurov --delete --exclude-from=/home/tof/bin/.ExcludeRsync -e "ssh -i /home/tof/.ssh/diskstation"   /home/tof  diskstation:/volume1/homes/tof/

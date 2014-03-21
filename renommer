@@ -1,0 +1,11 @@
+#! /bin/sh
+for i in `find . -type f` 
+do
+    fich=`echo ${i##*/}`
+    rep=`echo ${i%/*}`
+    nvx=`echo ${fich/$1/$2}`
+    if [[ `echo $fich | grep $1` ]]
+    then
+        mv $i $rep/$nvx;
+    fi
+done
